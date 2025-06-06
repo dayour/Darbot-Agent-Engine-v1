@@ -5,12 +5,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 URL = os.getenv("url")
-if URL.endswith("/"):
+if URL is not None and URL.endswith("/"):
     URL = URL[:-1]
 
 load_dotenv()
 API_URL = os.getenv("api_url")
-if API_URL.endswith("/"):
+if API_URL is not None and API_URL.endswith("/"):
     API_URL = API_URL[:-1]
 
 # Calculate today's date + 10 days
